@@ -1,5 +1,5 @@
-<?php if(isset($value)){
-    ?><div>{{$value}} - error</div>
-<?php } else { ?>
-    <div>sucess</div>
-<?php } ?>
+@if (!empty($value))
+    <div style="color: red">{{ $value }} - error</div>
+@else
+    <div style="color: green">success</div>
+@endif
