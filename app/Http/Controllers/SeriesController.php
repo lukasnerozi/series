@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 
 class SeriesController extends Controller
 {
@@ -12,9 +11,9 @@ class SeriesController extends Controller
         $series = [
             'Punisher',
             'Lost',
-            'Geys\'s anatomy'
+            'Greys\'s anatomy'
         ];
-
-       return view('listar-series', ['series' => $series]);
+        
+       return view('series.index')->with('series', $series);
     }
 }
